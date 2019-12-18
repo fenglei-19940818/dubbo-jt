@@ -11,20 +11,20 @@ import com.jt.dubbo.service.UserService;
 
 @RestController
 public class UserController {
-	
-	@Reference(timeout=3000,check=true)
-	private UserService userService;
-	
-	@RequestMapping("/findAll")
-	public List<User> findAll(){
-		
-		return userService.findAll();
-	}
-	
-	@RequestMapping("/saveUser/{name}/{age}/{sex}")
-	public String saveUser(User user) {
-		
-		userService.saveUser(user);
-		return "用户入库成功!!!";
-	}
+
+    @Reference(timeout = 3000, check = false)
+    private UserService userService;
+
+    @RequestMapping("/findAll")
+    public List<User> findAll() {
+
+        return userService.findAll();
+    }
+
+    @RequestMapping("/saveUser/{name}/{age}/{sex}")
+    public String saveUser(User user) {
+
+        userService.saveUser(user);
+        return "用户入库成功!!!";
+    }
 }

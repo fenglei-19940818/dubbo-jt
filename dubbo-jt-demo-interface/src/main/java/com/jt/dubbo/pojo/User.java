@@ -10,16 +10,15 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
-@Accessors(chain=true)
+@Accessors(chain = true)
 @TableName
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
+    private String name;
+    private Integer age;
+    private String sex;
 
-public class User implements Serializable{
-	private static final long serialVersionUID = 1L;
-	@TableId(type=IdType.AUTO)
-	private Integer id;
-	private String name;
-	private Integer age;
-	private String sex;
-	
-	
+
 }
