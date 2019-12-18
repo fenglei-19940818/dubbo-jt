@@ -120,12 +120,9 @@
 		</dependency>	
 	</dependencies>
 	<modules>
-		<module>dobbo-jt-demo-interface</module>
 		<module>dubbo-jt-demo-provider</module>
 		<module>dubbo-jt-demo-interface</module>
 		<module>dubbo-jt-demo-consumer</module>
-		<module>dubbo-jt-demo-util</module>
-		<module>dubbo-jt-manage</module>
 		<module>dubbo-jt-demo-provider2</module>
 	</modules>
 </project>
